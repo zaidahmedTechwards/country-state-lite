@@ -1,17 +1,17 @@
 export const findEntryByCode = (source: any, code: string) => {
 	if (code && source != null) {
 		const codex = source.findIndex((c: any) => {
-			return c.isoCode === code;
+			return c.code === code;
 		});
 		return codex !== -1 ? source[codex] : undefined;
 	}
 	return undefined;
 };
 
-export const findStateByCodeAndCountryCode = (source: any, code: string, countryCode: string) => {
-	if (code && countryCode && source != null) {
+export const findStateByCodeAndCountryCode = (source: any, code: string, countrycode: string) => {
+	if (code && countrycode && source != null) {
 		const codex = source.findIndex((c: any) => {
-			return c.isoCode === code && c.countryCode === countryCode;
+			return c.code === code && c.countrycode === countrycode;
 		});
 		return codex !== -1 ? source[codex] : undefined;
 	}

@@ -1,217 +1,16 @@
 /* eslint-disable no-shadow */
-import { Country, State, City } from '../index';
-import { ICountry, ICity, IState } from '../interface';
+import { Country, State } from '../index';
+import { ICountry, IState } from '../interface';
 
-const executeAllTests = function (Country: any, State: any, City: any) {
+const executeAllTests = function (Country: any, State: any) {
 	test('Check for Country By Code ', () => {
 		const code = 'CA';
 		const country: ICountry = Country.getCountryByCode(code);
 		expect(country).toEqual({
 			name: 'Canada',
-			phonecode: '1',
-			isoCode: 'CA',
+			code: 'CA',
 			flag: '🇨🇦',
-			currency: 'CAD',
-			latitude: '60.00000000',
-			longitude: '-95.00000000',
-			timezones: [
-				{
-					zoneName: 'America/Atikokan',
-					gmtOffset: -18000,
-					gmtOffsetName: 'UTC-05:00',
-					abbreviation: 'EST',
-					tzName: 'Eastern Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Blanc-Sablon',
-					gmtOffset: -14400,
-					gmtOffsetName: 'UTC-04:00',
-					abbreviation: 'AST',
-					tzName: 'Atlantic Standard Time',
-				},
-				{
-					zoneName: 'America/Cambridge_Bay',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Creston',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Dawson',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Dawson_Creek',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Edmonton',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Fort_Nelson',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America)',
-				},
-				{
-					zoneName: 'America/Glace_Bay',
-					gmtOffset: -14400,
-					gmtOffsetName: 'UTC-04:00',
-					abbreviation: 'AST',
-					tzName: 'Atlantic Standard Time',
-				},
-				{
-					zoneName: 'America/Goose_Bay',
-					gmtOffset: -14400,
-					gmtOffsetName: 'UTC-04:00',
-					abbreviation: 'AST',
-					tzName: 'Atlantic Standard Time',
-				},
-				{
-					zoneName: 'America/Halifax',
-					gmtOffset: -14400,
-					gmtOffsetName: 'UTC-04:00',
-					abbreviation: 'AST',
-					tzName: 'Atlantic Standard Time',
-				},
-				{
-					zoneName: 'America/Inuvik',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Iqaluit',
-					gmtOffset: -18000,
-					gmtOffsetName: 'UTC-05:00',
-					abbreviation: 'EST',
-					tzName: 'Eastern Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Moncton',
-					gmtOffset: -14400,
-					gmtOffsetName: 'UTC-04:00',
-					abbreviation: 'AST',
-					tzName: 'Atlantic Standard Time',
-				},
-				{
-					zoneName: 'America/Nipigon',
-					gmtOffset: -18000,
-					gmtOffsetName: 'UTC-05:00',
-					abbreviation: 'EST',
-					tzName: 'Eastern Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Pangnirtung',
-					gmtOffset: -18000,
-					gmtOffsetName: 'UTC-05:00',
-					abbreviation: 'EST',
-					tzName: 'Eastern Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Rainy_River',
-					gmtOffset: -21600,
-					gmtOffsetName: 'UTC-06:00',
-					abbreviation: 'CST',
-					tzName: 'Central Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Rankin_Inlet',
-					gmtOffset: -21600,
-					gmtOffsetName: 'UTC-06:00',
-					abbreviation: 'CST',
-					tzName: 'Central Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Regina',
-					gmtOffset: -21600,
-					gmtOffsetName: 'UTC-06:00',
-					abbreviation: 'CST',
-					tzName: 'Central Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Resolute',
-					gmtOffset: -21600,
-					gmtOffsetName: 'UTC-06:00',
-					abbreviation: 'CST',
-					tzName: 'Central Standard Time (North America',
-				},
-				{
-					zoneName: 'America/St_Johns',
-					gmtOffset: -12600,
-					gmtOffsetName: 'UTC-03:30',
-					abbreviation: 'NST',
-					tzName: 'Newfoundland Standard Time',
-				},
-				{
-					zoneName: 'America/Swift_Current',
-					gmtOffset: -21600,
-					gmtOffsetName: 'UTC-06:00',
-					abbreviation: 'CST',
-					tzName: 'Central Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Thunder_Bay',
-					gmtOffset: -18000,
-					gmtOffsetName: 'UTC-05:00',
-					abbreviation: 'EST',
-					tzName: 'Eastern Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Toronto',
-					gmtOffset: -18000,
-					gmtOffsetName: 'UTC-05:00',
-					abbreviation: 'EST',
-					tzName: 'Eastern Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Vancouver',
-					gmtOffset: -28800,
-					gmtOffsetName: 'UTC-08:00',
-					abbreviation: 'PST',
-					tzName: 'Pacific Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Whitehorse',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Winnipeg',
-					gmtOffset: -21600,
-					gmtOffsetName: 'UTC-06:00',
-					abbreviation: 'CST',
-					tzName: 'Central Standard Time (North America',
-				},
-				{
-					zoneName: 'America/Yellowknife',
-					gmtOffset: -25200,
-					gmtOffsetName: 'UTC-07:00',
-					abbreviation: 'MST',
-					tzName: 'Mountain Standard Time (North America',
-				},
-			],
+			phonecode: '+1',
 		});
 	});
 
@@ -224,7 +23,7 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 	test('Check for Canada States', () => {
 		const code = 'CA';
 		const country: any = Country.getCountryByCode(code);
-		const states = State.getStatesOfCountry(country.isoCode);
+		const states = State.getStatesOfCountry(country.code);
 		const names = states.map((state: IState) => {
 			return state.name;
 		});
@@ -248,7 +47,7 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 	test('Check All States for United States Of America', () => {
 		const code = 'US';
 		const country: any = Country.getCountryByCode(code);
-		const states = State.getStatesOfCountry(country.isoCode);
+		const states = State.getStatesOfCountry(country.code);
 		const names = states.map((state: IState) => {
 			return state.name;
 		});
@@ -325,7 +124,7 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 	test('Check States for India', () => {
 		const code = 'IN';
 		const country: any = Country.getCountryByCode(code);
-		const states = State.getStatesOfCountry(country.isoCode);
+		const states = State.getStatesOfCountry(country.code);
 		const names = states.map((state: IState) => {
 			return state.name;
 		});
@@ -376,59 +175,14 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 		expect(states.length).toEqual(0);
 	});
 
-	test('Check Cities for Delhi', () => {
-		const countryCode = 'IN';
-		const stateCode = 'DL';
-		const cities: any = City.getCitiesOfState(countryCode, stateCode);
-		const names = cities.map((city: ICity) => {
-			return city.name;
-		});
-		expect(names).toEqual([
-			'Alipur',
-			'Bawana',
-			'Central Delhi',
-			'Delhi',
-			'Deoli',
-			'East Delhi',
-			'Karol Bagh',
-			'Najafgarh',
-			'Nangloi Jat',
-			'Narela',
-			'New Delhi',
-			'North Delhi',
-			'North East Delhi',
-			'North West Delhi',
-			'Pitampura',
-			'Rohini',
-			'South Delhi',
-			'South West Delhi',
-			'West Delhi',
-		]);
-	});
-
-	test('Check Cities for undefined State', () => {
-		let countryCode;
-		const stateCode = 'DL';
-		const cities: any = City.getCitiesOfState(countryCode, stateCode);
-
-		expect(cities.length).toEqual(0);
-	});
-
-	test('Check Cities for undefined State', () => {
-		const countryCode = 'IN';
-		let stateCode;
-		const cities: any = City.getCitiesOfState(countryCode, stateCode);
-		expect(cities.length).toEqual(0);
-	});
-
-	test('Get State by State ISOCode and Country Code', () => {
+	test('Get State by State Code and Country Code', () => {
 		const countryCode = 'PK';
 		const stateCode = 'KP';
 		const state: any = State.getStateByCodeAndCountry(stateCode, countryCode);
 		expect(state.name).toEqual('Khyber Pakhtunkhwa');
 	});
 
-	test('Get State by State ISOCode undefined and Country Code', () => {
+	test('Get State by State Code undefined and Country Code', () => {
 		const countryCode = 'PK';
 		let stateCode;
 		const state: any = State.getStateByCodeAndCountry(stateCode, countryCode);
@@ -441,7 +195,6 @@ const executeAllTests = function (Country: any, State: any, City: any) {
 		const state: any = State.getStateByCodeAndCountry(stateCode, countryCode);
 		expect(state).toEqual(undefined);
 	});
-
 };
 export default executeAllTests;
-executeAllTests(Country, State, City);
+executeAllTests(Country, State);
