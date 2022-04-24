@@ -1,10 +1,10 @@
-# country-state-lite
+# country-state-lite-v1
 
 Light Weight library for Country and State
 
 # Install
 
-`npm i country-state-lite`
+`npm i country-state-lite-v1`
 
 # Docs
 
@@ -62,10 +62,10 @@ type: **array of json | ICountry**
 ```js
 [
 	{
-		name: "United States",
-		code: "US",
-		flag: "🇺🇸",
-		phonecode: "+1"
+		name: 'United States',
+		code: 'US',
+		flag: '🇺🇸',
+		phonecode: '+1',
 	},
 ];
 ```

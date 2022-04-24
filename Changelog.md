@@ -1,12 +1,12 @@
 ## Change Logs
 
-**v1.0.0** ::
+**v0.1.0** ::
 
 1. Countries and States data has been optimized.
 2. Logic has been re-engineered for `Countries` and `States`. City data and constructed logic has been removed.
 3. Country Flag and Phone Code of respective countries has been added.
 4. Readme has been changed.
 
-**v1.0.1** ::
+**v0.1.1** ::
 
-1. CJS has been added to package.JSON
+1. Readme has been changed and package.json has been changed.

@@ -1,15 +1,14 @@
 {
-	"name": "country-state-lite",
-	"version": "1.0.1",
+	"name": "country-state-lite-v1",
+	"version": "0.1.1",
 	"description": "Light Weight library for Country and State",
-	"main": "./lib/cjs/index.js",
-	"module": "./lib/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
 	"sideEffects": false,
 	"scripts": {
 		"test": "jest",
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-		"prepublish": "npm run build",
+		"build-ts": "tsc -p tsconfig.json",
+		"prepublish": "npm run build-ts",
 		"lint": "eslint index.ts __test__ --fix"
 	},
 	"author": "zaid.ahmed@techwards.co",
